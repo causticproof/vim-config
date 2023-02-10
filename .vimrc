@@ -9,6 +9,7 @@ call plug#begin()
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'drmikehenry/vim-headerguard'
 call plug#end()
 
 " Terminal {{{1
@@ -90,8 +91,10 @@ set smarttab
 set swapfile
 set backup
 set writebackup
-set directory=$HOME/.cache/vim/swap//,.,$HOME/tmp,/var/tmp,/tmp
-set backupdir=$HOME/.cache/vim/backup//,.,$HOME/tmp,$HOME
+set directory=$HOME/.vim/swap//,.,$HOME/tmp,/var/tmp,/tmp
+set backupdir=$HOME/.vim/backup//,.,$HOME/tmp,$HOME
+
+set cino=:0,g0
 
 " Color Scheme {{{1
 if has('gui_running')
